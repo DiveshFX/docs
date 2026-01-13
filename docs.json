@@ -28,10 +28,15 @@
             "group": "AES Encryption",
             "icon": "lock",
             "pages": [
-              "guides/aes-encryption/aes-documentation",
-              "essentials/markdown"
+              "guides/aes-encryption/aes-documentation"
             ]
           }
+        ]
+      },
+      {
+        "tab": "Redacted :3",
+        "pages": [
+          "essentials/markdown"
         ]
       }
     ]
