@@ -8,20 +8,6 @@
     "dark": "#15803D"
   },
   "navigation": {
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "icon": "book-open-cover",
-          "href": "https://mintlify.com/docs"
-        },
-        {
-          "anchor": "Blog",
-          "icon": "newspaper",
-          "href": "https://mintlify.com/blog"
-        }
-      ]
-    },
     "tabs": [
       {
         "tab": "Guides",
@@ -29,33 +15,21 @@
           {
             "group": "Getting started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "index"
             ]
           },
           {
-            "group": "Customization",
+            "group": "RSA Encryption",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "essentials/settings"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "AES Encryption",
+            "icon": "lock",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "guides/aes-encryption/aes-documentation",
+              "essentials/markdown"
             ]
           }
         ]

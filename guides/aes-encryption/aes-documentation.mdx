@@ -1,0 +1,85 @@
+---
+title: "AES Documentation"
+description: "This section provides detail information about AES and how to use the tool."
+---
+
+**Tool URL:** https://diveshfx.github.io/online-tools/aes/encrypt/
+
+### 2.1 What is AES
+
+AES is a symmetric encryption algorithm. It uses **one shared secret key** for both encryption and decryption.
+
+It is fast, secure, and widely used for encrypting large amounts of data.
+
+### 2.2 AES Encryption Tool
+
+This tool allows you to encrypt text or files using AES with customizable security settings.
+
+#### Available Settings
+
+- **Input Type**
+  - Text
+  - File
+  - URL
+- **Input Encoding**
+  - UTF-8 (recommended)
+- **Output Encoding**
+  - Hex (lower case)
+  - Base64
+- **Key Size**
+  - 128 bits
+  - 192 bits
+  - 256 bits
+  - Recommendation: 256 bits
+- **Mode**
+  - CBC
+  - CFB
+  - OFB
+  - CTR
+  - GCM
+  - CBC is common, GCM is recommended for authenticated encryption
+- **Padding**
+  - PKCS7 (default and recommended)
+- **Key Type**
+  - PBKDF2
+  - EvpKDF
+- **Passphrase**
+  - Password used to derive the AES key
+- **Hash**
+  - SHA256 (recommended)
+- **Salt Type**
+  - Random (recommended)
+- **Custom Iteration**
+  - Allows control over PBKDF2 iteration count
+
+---
+
+### 2.3 How to Encrypt Data Using AES
+
+1. Open the AES Encryption page
+2. Select **Input Type** and enter your data
+3. Choose **Key Size** (256 bits recommended)
+4. Select **Mode** and **Padding**
+5. Enter a strong **Passphrase**
+6. Click **Encrypt**
+7. The encrypted output will appear in the output panel
+
+You can copy or share the encrypted result.
+
+---
+
+### 2.4 AES Decryption
+
+To decrypt data:
+
+1. Go to the AES Decryption section
+2. Paste the encrypted output
+3. Use the **same settings** as encryption
+4. Enter the same passphrase
+5. Click **Decrypt**
+
+If all parameters match, the original data will be restored.
+
+> ## **Browser Based Encryption Disclaimer**
+
+> `All operations are performed locally in your browser. Keys and data are not sent to any server. However, avoid using browser tools for extremely sensitive production secrets.`
