@@ -1,18 +1,40 @@
 ---
-title: "Introduction"
-description: "Project Title: RSA vs AES – A Cryptography Comparison
-Developed by: Divesh, Kaushal & Tanisha"
+title: "RSA vs AES (Documentation + Interactive Demos)"
+description: "This documentation compares RSA and AES, two foundational cryptographic systems used across modern security (web, apps, files, authentication). It is designed as an explorable “documentation website” version of a presentation, with interactive demos linked throughout.
+
+Project URL: underrated.quest
+Interactive tools hub: https://diveshfx.github.io/online-tools/
+
+Presented by - Divesh, Kaushal, Tanisha"
 ---
 
 # Introduction
 
-With the rapid growth of digital communication and online systems, securing data has become a critical requirement. Cryptography plays a major role in protecting sensitive information from unauthorized access. Among the most widely used encryption techniques today are **RSA** and **AES**.
+Cryptography is the practice of protecting information using mathematics. In modern computing, cryptography is mainly used to achieve:
 
-This project focuses on a comparative study of **RSA (Rivest–Shamir–Adleman)** and **AES (Advanced Encryption Standard)**. Both algorithms are used extensively in modern security systems, yet they differ significantly in their design, performance, and use cases.
+1. Confidentiality — keep data secret from unauthorized parties
+2. Integrity — detect if data has been modified
+3. Authenticity — prove who created/sent the data
+4. Non-repudiation — the sender cannot reasonably deny signing/approving something.
 
-The purpose of this project is to analyze how RSA and AES work, highlight their strengths and limitations, and demonstrate their practical usage using browser based cryptography tools. By comparing these two encryption methods, this project helps users understand when and why each algorithm should be used.
+Two major families of encryption exist:
 
-# **Project Overview**
+**A) Symmetric cryptography (AES)**
+
+- One shared secret key encrypts and decrypts
+- Very fast and efficient
+- Main challenge: securely sharing that secret key
+
+**B) Asymmetric cryptography (RSA)**
+
+- Uses a public key + private key pair
+- Public key can be shared openly; private key stays secret
+- Solves key sharing and enables digital signatures
+- Slower and heavier than symmetric encryption
+
+If you remember one idea: AES is built to encrypt lots of data quickly, while RSA is built to securely exchange keys and prove identity (signatures). In practice, they are usually used together.
+
+**Project Overview**
 
 This project uses the online cryptography tools available at: https://diveshfx.github.io/online-tools/
 
@@ -23,43 +45,3 @@ The comparison is based on:
 - Performance and speed
 - Key management
 - Practical use cases
-
-<Columns cols={2}>
-  <Card title="Edit locally" icon="pen-to-square" href="/development">
-    Edit your docs locally and preview them in real time.
-  </Card>
-  <Card title="Customize your site" icon="palette" href="/essentials/settings">
-    Customize the design and colors of your site to match your brand.
-  </Card>
-  <Card title="Set up navigation" icon="map" href="/essentials/navigation">
-    Organize your docs to help users find what they need and succeed with your product.
-  </Card>
-  <Card title="API documentation" icon="terminal" href="/api-reference/introduction">
-    Auto-generate API documentation from OpenAPI specifications.
-  </Card>
-</Columns>
-
-## Create beautiful pages
-
-Everything you need to create world-class documentation.
-
-<Columns cols={2}>
-  <Card title="Write with MDX" icon="pen-fancy" href="/essentials/markdown">
-    Use MDX to style your docs pages.
-  </Card>
-  <Card title="Code samples" icon="code" href="/essentials/code">
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card title="Images" icon="image" href="/essentials/images">
-    Display images and other media.
-  </Card>
-  <Card title="Reusable snippets" icon="recycle" href="/essentials/reusable-snippets">
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
-
-## Need inspiration?
-
-<Card title="See complete examples" icon="stars" href="https://mintlify.com/customers">
-  Browse our showcase of exceptional documentation sites.
-</Card>

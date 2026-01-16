@@ -6,16 +6,16 @@ description: "This section provides detail information about RSA and how to use 
 
 Tool URL: https://diveshfx.github.io/online-tools/rsa/key-generator/
 
-## 1.1 What is RSA
+## 1. What is RSA
 
-RSA is an \*\*asymmetric \*\*encryption algorithm. It uses a **key pair**:
+RSA is an asymmetric encryption algorithm. It uses a **key pair**:
 
 - A **public key** to encrypt data or verify signatures
 - A **private key** to decrypt data or sign messages
 
 It is commonly used for secure key exchange, digital signatures, and authentication.
 
-### 1.2 RSA Key Generator
+### RSA Key Generator
 
 The RSA Key Generator allows you to generate a public and private key pair directly in the browser.
 
@@ -39,7 +39,7 @@ The RSA Key Generator allows you to generate a public and private key pair direc
 - **Remember Input**
   - Keeps your settings saved in the browser
 
-### 1.3 How to Generate RSA Keys
+### How to Generate RSA Keys
 
 1. Open the RSA Key Generator page
 2. Select the desired **Bits** value
@@ -52,10 +52,109 @@ The RSA Key Generator allows you to generate a public and private key pair direc
 
 You can copy or download each key using the icons provided.
 
-### 1.4 How RSA Is Typically Used
+### How RSA Is Typically Used
 
 - Encrypt small data such as AES keys
 - Verify digital signatures
 - Secure authentication systems
 
 For large data encryption, RSA is usually combined with AES.
+
+## 2. RSA Key Generation (Key Pair Creation)
+
+What it is:\
+RSA key generation produces a public/private key pair. The security comes from the difficulty of reversing the underlying math (notably, factoring very large numbers).
+
+What you should understand (high level):
+
+- RSA starts from large prime numbers internally
+- It produces a public key and a private key that “fit together”
+- You can distribute the public key openly
+- The private key must remain secret
+
+Try it (demo):
+
+1. Open the RSA key generator
+2. Generate a key pair
+3. Save the public key and private key outputs for the next steps
+
+Link: https://diveshfx.github.io/online-tools/rsa/key-generator/ or [**tiny.cc/rsakeygenerator**](https://tiny.cc/#)
+
+## 3. RSA Encryption (Using the Public Key)
+
+### What it is:
+
+### \
+RSA encryption is typically “public key encrypts → private key decrypts”.
+
+Core idea:
+
+- If I have your public key, I can encrypt a message for you
+- Only you (with the private key) can decrypt it
+
+Practical note (why RSA isn’t used for everything):\
+RSA is not efficient for large data. It’s commonly used to encrypt small pieces of data like symmetric keys, not entire files.
+
+Try it (demo):
+
+1. Copy the public key from key generation
+2. Enter a short message (example: “Meet me at 5PM”)
+3. Encrypt using the public key
+4. You get ciphertext
+
+Link: https://diveshfx.github.io/online-tools/rsa/encrypt/ or http://tiny.cc/rsaencrypt
+
+## 4. RSA Decryption (Using the Private Key)
+
+What it is:\
+RSA decryption uses the private key to recover the original message from ciphertext.
+
+Core idea:
+
+- Only the private key can reverse what was encrypted with the matching public key
+
+Security implication:\
+If a private key is leaked, any attacker can decrypt any message encrypted to that public key.
+
+Try it (demo):
+
+1. Copy the ciphertext produced in the encryption step
+2. Paste the private key
+3. Decrypt
+4. Confirm you got the original plaintext back
+
+Link: https://diveshfx.github.io/online-tools/rsa/decrypt/ or http://tiny.cc/rsadecrypt
+
+## 5. RSA Signing (Using the Private Key)
+
+Encryption hides content. Signatures prove authorship and detect tampering.
+
+What it is:\
+RSA signing uses the private key to produce a signature for a specific message.
+
+What a signature guarantees (conceptually):
+
+- Authenticity: the signer had the private key
+- Integrity: the message has not changed since it was signed
+- Non-repudiation (in many contexts): the signer cannot plausibly deny signing (especially in a certificate-based system)
+
+Try it (demo):
+
+1. Paste a message (example: “`I approve this transaction`”)
+2. Paste the private key
+3. Generate signature
+4. Save the message + signature pair
+
+Link: https://diveshfx.github.io/online-tools/rsa/sign/ or http://tiny.cc/rsasign
+
+### RSA Tools
+
+Key generator: https://diveshfx.github.io/online-tools/rsa/key-generator/\
+Encryption: https://diveshfx.github.io/online-tools/rsa/encrypt/\
+Decryption: https://diveshfx.github.io/online-tools/rsa/decrypt/\
+Sign message: https://diveshfx.github.io/online-tools/rsa/sign/\
+Verify signature: https://diveshfx.github.io/online-tools/rsa/verify/
+
+<Note>
+  Important note: These tools are for learning/demos. Do not paste real passwords, private keys you actually use, or sensitive personal/company data.
+</Note>
